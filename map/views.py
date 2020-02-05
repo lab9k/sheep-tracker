@@ -1,6 +1,5 @@
 from django.views.generic import TemplateView
 from django.conf import settings
-from map.models import Sheep
 from sheep_service.api import SheepApi
 
 
