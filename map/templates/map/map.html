@@ -48,7 +48,19 @@
     const init = () => {
       const map = mapFactory();
       const {antPath} = L.polyline;
-      let path = antPath(parseAntPath(getData()));
+      let path = antPath(parseAntPath(getData()), {
+        "delay": 400,
+        "dashArray": [
+          100,
+          100
+        ],
+        "weight": 5,
+        "color": "#0000FF",
+        "pulseColor": "#FFFFFF",
+        "paused": false,
+        "reverse": false,
+        "hardwareAccelerated": true
+      });
       path.addTo(map);
       map.fitBounds(path.getBounds());
     };
